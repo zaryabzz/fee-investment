@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+ 
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
+  <link rel="stylesheet" href="mystyle.css">
+  <title>My Investment Fee Calculator</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="maincontainer">
+      <div class="slideContainer">
+        <div class="sliderow">
+          <p> <span class='inputtext'> Fund Value (In £)</span>
+            <h5 id='FundValue' value='50000' class="valueSlide"></h5>
+          </p>
+          <input type="range" min="50000" max="2000000" value="50000" id="slideFund" class="slider" onchange="getValue()">
+          <br>
+          <br>         
+        </div>
+        <div class="sliderow">
+          <p> <span class='inputtext'> Annual Fees Charged (In Percentange)</span>
+            <h5 id='FeePercent' value='1' class="valueSlide"></h5>
+          </p>
+          <input type="range" min="1" max="6" value="1" id="slideFee" class="slider sd" onchange="getPercent()">          
+        </div>
+      </div>
+      
+      <div class="slideContainer">
+        <div class="sliderow">
+         <p> <span class='inputtext'> Fund Value (In £)</span></p>
+          <p id="setfundValue">£50,000</p>
+        </div>
+        <div class="sliderow">
+               <p> <span class='inputtext'> Annual Fees Charged (In Percentange)</span></p>
+          <p id="setfundPercentage">%1</p>
+        </div>
+      </div>
+
+      <div class="chartcontainer">
+        <canvas id="myChart"></canvas>
+      </div>
+    </div>
+  </div>
+  <script src="main.js"></script>  
+</body>
+
+</html>
